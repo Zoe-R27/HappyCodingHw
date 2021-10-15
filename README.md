@@ -1,13 +1,10 @@
-# 郴弄梅 - Zoe Rudd
-
-# 快樂學程式 - 面試作業
-
+# 郴弄梅 - Zoe Rudd - 快樂學程式 - 面試作業
 ## 標準：
 用FASTAPI，編寫一個REST API，有CRUD的部分 （Create, Read, Update, Delete)
 
 ---
 
-##我的過程
+## 我的過程
 
 1. 我研究FASTAPI, REST API 和CRUD
 2. 因爲我沒用過FASTAPI我閲讀一些網站，看一些視頻包括：
