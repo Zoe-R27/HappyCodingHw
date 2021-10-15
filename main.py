@@ -29,15 +29,15 @@ def findPerson(pid):
       return i
   return -1
 
-# 第二個READ函數，返回具體的Person
+# 第二個READ函數，返回一個的Person
 @app.get("/Person/{person_id}")
 def get_person(person_id: int):
   index = findPerson(person_id)
   if index > -1:
     return personDB[index]
-  return {"message": "That person is not in the database 這個人不在資料庫"}
+  return {"message": "That person is not in the database 這個人不在資料庫裏"}
 
-# 第一Create函數，把新的Person的oject加入在personDB裏
+# 第一個Create函數，把新的Person的oject加入在personDB裏
 @app.post("/Add_Person_Item")
 def add_person_item(person: Person):
   index = findPerson(person.id)
@@ -46,7 +46,7 @@ def add_person_item(person: Person):
   personDB.append(person)
   return {"message": "Person added 人加入了"}
 
-# 第二Create函數，如果沒有Person的object，還可以加入人
+# 第二個Create函數，如果沒有Person的object，還可以加入人
 @app.post("/Add_Person")
 def add_person(id: int, name: str, age: int, nat: str, time: Optional[datetime] = datetime.now()):
   data = {
@@ -60,7 +60,7 @@ def add_person(id: int, name: str, age: int, nat: str, time: Optional[datetime] 
   # print(tempPerson)
   return (add_person_item(tempPerson)) # 用已經寫的函數來加入人的消息
 
-# 第一Update函數，會改變人的消息
+# 第一個Update函數，會改變人的消息
 @app.put("/Update_Person_Item")
 def update_person_item(person: Person):
   index = findPerson(person.id)
@@ -69,7 +69,7 @@ def update_person_item(person: Person):
     return {"message": "Person has be updated 人的消息改變了"}
   return {"message": "Person does not exist in the database 人不在資料庫裏"}
 
-# 第二Update函數，如果沒有Person的object，還可以改變
+# 第二個Update函數，如果沒有Person的object，還可以改變
 @app.put("/Update_Person")
 def update_person(id: int, name: str, age: int, nat: str, time: Optional[datetime] = datetime.now()):
   data = {
@@ -82,5 +82,17 @@ def update_person(id: int, name: str, age: int, nat: str, time: Optional[datetim
   tempPerson = Person(**data)
   return (update_person_item(tempPerson))
 
-#
-# @app.delete
+# 第一個Delete函數，把一個Person的object刪除了
+@app.delete("/Delete/{person_id}")
+def delete_person(pid: int):
+  index = findPerson(pid)
+  if index != -1:
+    personDB.pop(index)
+    return {"message": "Person deleted 人刪除了"}
+  return {"message": "Person does not exist in the database 人不在資料庫裏"}
+
+# 第二個Delete函數，每個Person的objects刪除了
+@app.delete("/Delete")
+def delete_all():
+  personDB.clear
+  return {"message": "Deleted all people from database 每個人都刪除了"}
