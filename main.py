@@ -94,5 +94,5 @@ def delete_person(pid: int):
 # 第二個Delete函數，每個Person的objects刪除了
 @app.delete("/Delete")
 def delete_all():
-  personDB.clear
+  personDB.clear()
   return {"message": "Deleted all people from database 每個人都刪除了"}
