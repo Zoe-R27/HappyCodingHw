@@ -4,13 +4,13 @@
 
 ### 我用的軟體：
   - Atom
-  - Github
+  - GitHub
   - Ubuntu Linux Subsystem on Windows
 
 ### 怎麽用：
 1. 首先，clone這個Github的repository
 2. 第二，在terminal上，`uvicorn main:app`來运行实时服务器
-3. 第三，打開`http://localhost:8000/docs`您可以看到FASTAPI的auto-generated docs，更容易測試這個API的功能性
+3. 第三，打開`http://localhost:8000/docs`，您可以看到FASTAPI的auto-generated docs，更容易測試這個API的功能性
 4. 選擇一個函數，加入您想要的消息
 
 ### 我的過程：
@@ -44,7 +44,6 @@
 ### 我的挑戰，問題，而怎麽解決
 1. 學習FASTAPI是什麽 - 我去看很多網站和視頻
 2. 選擇應不應該用MySQL資料庫 - 我選擇不應該用，因爲我想注意好好學習FASTAPI。用MySQL資料庫會讓我有更多不瞭解的問題
-3. 應該編寫怎麽樣的資料庫，因爲標準只是用FASTAPI編寫有CRUD的Rest API -
-4. 我忘記了一些Python的Syntax -
-5. 我有一些Ubuntu和Github的問題 -
-6.
+3. 應該編寫怎麽樣的資料庫，因爲標準只是用FASTAPI編寫有CRUD的Rest API - 我認爲應該用比較簡單的資料庫有關的結構，因爲我想重視學習FASTAPI，所以我選用Python的串列。我也選擇應該用比較簡單的消息，所以我寫了人的消息class。這個class很容易瞭解。
+4. 我忘記了一些Python的Syntax - 因爲我最近用的程式語言是Go，我忘記了一些Python的Syntax，所以我需要去看一些學習Python的網站（我很喜歡的網站是[W3Schools](https://www.w3schools.com/python/) 和 [GeeksforGeeks](https://www.geeksforgeeks.org/python-programming-language/))。所以不是很大的問題，只是我需要花了一些時間去查一下。
+5. 我有一些Ubuntu和GitHub的問題 - 因爲我很長時間沒用Ubuntu，我需要update和upgrade它，我也需要下載FASTAPI，uvicorn和pip，但是uvicorn的path有一些問題，所以我去看一些網站。看完以後，我可以修改我的問題。GitHub也有一些問題因爲這是我第一次用自己的GitHub（以前我用我的學校或者公司GitHub），但看一些網站以後，我沒有問題。
