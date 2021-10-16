@@ -8,7 +8,7 @@
   - Ubuntu Linux Subsystem on Windows
 
 ### 怎麽用：
-1. 首先，clone這個Github的repository
+1. 首先，clone這個GitHub repository
 2. 第二，在terminal上，`uvicorn main:app`來運行實時服務器 
 3. 第三，打開`http://localhost:8000/docs`，您可以看到FASTAPI的auto-generated docs，更容易測試這個API的功能性
 4. 選擇一個函數，加入您想要的消息
@@ -30,7 +30,7 @@
 3. 我也需要下載FASTAPI，uvicorn, pip等等
 4. 我認爲用MYSQL資料庫很複雜，有一點麻煩，因爲需要設置其他的軟體（比如：SQLAcdemy)，所以在第一迭代我不會用來可以注意學習FASTAPI. 我會用Python的串列來存儲消息
 5. 我開始編寫程式: 編寫程式的時候，我常常看這些網站來幫我寫對的。我也常常查一些Python的syntax
-  - 開始編寫程式的時候，我也創造新的Github repository，所以我可以開始追蹤我的進程
+  - 開始編寫程式的時候，我也創造新的GitHub repository，所以我可以開始追蹤我的進程
   - 首先用FASTAPI Introduction網站的例子來試試怎麽用FASTAPI 和 uvicorn
   - 其次開始寫自己的程式，選擇在那個迭代不會用MySQL資料庫，會用Python串列
   - 然後選擇我的資料庫内容的例子是人們的消息, 寫`personDB`的變數和`Person`的class
